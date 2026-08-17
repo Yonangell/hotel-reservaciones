@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const roomShema = new mongoose.Schema(
+const roomSchema = new mongoose.Schema(
   {
     number: { type: String, required: true, unique: true },
     type: {
@@ -8,9 +8,9 @@ const roomShema = new mongoose.Schema(
       required: true,
       enum: ["individual", "doble", "suite"],
     },
-    princePerNight: { type: Number, required: true },
+    pricePerNight: { type: Number, required: true }, 
   },
   { timestamps: true },
 );
 
-export default mongoose.model("Room", roomShema);
+export default mongoose.model("Room", roomSchema);
